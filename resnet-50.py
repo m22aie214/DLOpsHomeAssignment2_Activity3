@@ -48,7 +48,8 @@ criterion = nn.CrossEntropyLoss()
 # Define optimizers
 optimizers = {
     'Adam': optim.Adam(model.parameters(), lr=0.001),
-    'Adadelta': optim.Adadelta(model.parameters(), lr=1.0),
+    'Adagrad': optim.Adagrad(model.parameters(), lr=0.01),
+    'Adadelta': optim.Adadelta(model.parameters(), lr=1.0)
 }
 
 # Training loop
